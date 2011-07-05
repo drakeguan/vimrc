@@ -52,3 +52,6 @@
 [submodule "autoload"]
 	path = autoload
 	url = git@github.com:drakeguan/vim-pathogen.git
+[submodule "bundle/vcscommand"]
+	path = bundle/vcscommand
+	url = http://repo.or.cz/r/vcscommand.git
