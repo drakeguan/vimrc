@@ -1,7 +1,14 @@
+"
+" drake's vimrc
+" Shuen-Huei (Drake) Guan <drake.guan@gmail.com>
+" 
+" derived from vgod's vimrc
+"
+"
 " vgod's vimrc
 " Tsung-Hsiang (Sean) Chang <vgod@vgod.tw>
 " Fork me on GITHUB  https://github.com/vgod/vimrc
-
+"
 " read https://github.com/vgod/vimrc/blob/master/README.md for more info
 
 
@@ -16,8 +23,10 @@ set bs=2		" allow backspacing over everything in insert mode
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set autoread		" auto read when file is changed from outside
+set modeline            " enable modeline
 
 
+filetype off
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
@@ -36,6 +45,7 @@ if has("gui_running")	" GUI color and font settings
   set t_Co=256          " 256 color mode
   set cursorline        " highlight current line
   colors moria
+  "colors wombat256
 else
 " terminal color settings
   colors vgod
@@ -44,6 +54,7 @@ endif
 set clipboard=unnamed	" yank to the system register (*) by default
 set showmatch		" Cursor shows matching ) and }
 set showmode		" Show current mode
+set showcmd             " Show (partial) command in the last line of the screen
 set wildchar=<TAB>	" start wild expansion in the command line using <TAB>
 set wildmenu            " wild char completion menu
 
@@ -66,8 +77,8 @@ set tm=500
 
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
-   set softtabstop=3 
-   set shiftwidth=3 
+   set softtabstop=4 
+   set shiftwidth=4 
 
    au FileType Makefile set noexpandtab
 "}      							
@@ -94,6 +105,20 @@ endfunction
 
 "}
 
+
+" smartindent for python
+"autocmd BufRead *.py set nu et smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd BufRead *.py set nu et cinwords=if,elif,else,for,while,try,except,finally,def,class
+
+" highligh tabs for python
+" ref: http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+autocmd BufRead *.py set list listchars=tab:»-
+autocmd BufRead *.mel set list listchars=tab:»-
+autocmd BufRead *.tcl set list listchars=tab:»-
+autocmd BufRead *.slim set list listchars=tab:»-
+
+" actionscript 3 file type
+autocmd BufRead *.as set filetype=actionscript
 
 " C/C++ specific settings
 autocmd FileType c,cpp,cc  set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
@@ -146,8 +171,10 @@ set wmh=0                     " set the min height of a window to 0 so we can ma
 " comment them out if you want the original H/L
 " go to prev tab 
 map <S-H> gT
+map <C-]> gT
 " go to next tab
 map <S-L> gt
+map <C-\> gt
 
 " new tab
 map <C-t><C-t> :tabnew<CR>
@@ -295,5 +322,19 @@ endif
 " --- Command-T
 let g:CommandTMaxHeight = 15
 
+
 " --- SuperTab
 let g:SuperTabDefaultCompletionType = "context"
+
+
+"" taglist
+"nnoremap <silent> <F8> :TlistToggle<CR>
+"let Tlist_Exit_OnlyWindow = 1
+"let Tlist_GainFocus_On_ToggleOpen = 1
+
+
+" ropevim
+"if has('python')
+"    let $PYTHONPATH .= ":".$HOME."/.vim/ropevim/pylibs"
+"    source $HOME/.vim/ropevim/src/ropevim/ropevim.vim
+"endif
