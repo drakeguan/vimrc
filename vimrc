@@ -13,6 +13,7 @@
 
 
 " For pathogen.vim: auto load all plugins in .vim/bundle
+filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
@@ -26,7 +27,6 @@ set autoread		" auto read when file is changed from outside
 set modeline            " enable modeline
 
 
-filetype off
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
