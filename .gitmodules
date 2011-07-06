@@ -7,14 +7,14 @@
 [submodule "bundle/autoclose"]
 	path = bundle/autoclose
 	url = https://github.com/Townk/vim-autoclose.git
-[submodule "bundle/command-t"]
-	path = bundle/command-t
+[submodule "others/command-t"]
+	path = others/command-t
 	url = https://github.com/wincent/Command-T.git
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/CuteErrorMarker"]
-	path = bundle/CuteErrorMarker
+[submodule "others/CuteErrorMarker"]
+	path = others/CuteErrorMarker
 	url = https://github.com/Twinside/vim-cuteErrorMarker.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
@@ -25,8 +25,8 @@
 [submodule "bundle/VisIncr"]
 	path = bundle/VisIncr
 	url = https://github.com/vim-scripts/VisIncr.git
-[submodule "bundle/xmledit"]
-	path = bundle/xmledit
+[submodule "others/xmledit"]
+	path = others/xmledit
 	url = https://github.com/sukima/xmledit.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
@@ -37,11 +37,11 @@
 [submodule "bundle/OmniCppComplete"]
 	path = bundle/OmniCppComplete
 	url = https://github.com/vim-scripts/OmniCppComplete.git
-[submodule "bundle/javacomplete"]
-	path = bundle/javacomplete
+[submodule "others/javacomplete"]
+	path = others/javacomplete
 	url = https://github.com/vim-scripts/javacomplete
-[submodule "bundle/scala-vim-support"]
-	path = bundle/scala-vim-support
+[submodule "others/scala-vim-support"]
+	path = others/scala-vim-support
 	url = https://github.com/vgod/scala-vim-support.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
