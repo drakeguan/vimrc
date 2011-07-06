@@ -318,22 +318,25 @@ if !has("gui_running")
 endif
 
 
+" --- pydiction
+let g:pydiction_location = $HOME."/.vim/bundle/pydiction/complete-dict"
+
 
 " --- Command-T
-let g:CommandTMaxHeight = 15
+"let g:CommandTMaxHeight = 15
 
 
 " --- SuperTab
 let g:SuperTabDefaultCompletionType = "context"
 
 
-"" taglist
+" --- taglist
 "nnoremap <silent> <F8> :TlistToggle<CR>
 "let Tlist_Exit_OnlyWindow = 1
 "let Tlist_GainFocus_On_ToggleOpen = 1
 
 
-" ropevim
+" --- ropevim
 "if has('python')
 "    let $PYTHONPATH .= ":".$HOME."/.vim/ropevim/pylibs"
 "    source $HOME/.vim/ropevim/src/ropevim/ropevim.vim
