@@ -31,8 +31,8 @@
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
-[submodule "bundle/supertab"]
-	path = bundle/supertab
+[submodule "others/supertab"]
+	path = others/supertab
 	url = https://github.com/ervandew/supertab.git
 [submodule "bundle/OmniCppComplete"]
 	path = bundle/OmniCppComplete
