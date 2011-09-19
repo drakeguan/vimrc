@@ -170,10 +170,10 @@ set wmh=0                     " set the min height of a window to 0 so we can ma
 " move around tabs. conflict with the original screen top/bottom
 " comment them out if you want the original H/L
 " go to prev tab 
-map <S-H> gT
+"map <S-H> gT
 map <C-]> gT
 " go to next tab
-map <S-L> gt
+"map <S-L> gt
 map <C-\> gt
 
 " new tab
