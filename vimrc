@@ -336,6 +336,9 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 
 
+" --- conque
+let g:ConqueTerm_TERM = 'xterm'
+
 " --- ropevim
 "if has('python')
 "    let $PYTHONPATH .= ":".$HOME."/.vim/ropevim/pylibs"
