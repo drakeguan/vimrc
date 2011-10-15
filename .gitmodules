@@ -67,3 +67,6 @@
 [submodule "bundle/vim-pyunit"]
 	path = bundle/vim-pyunit
 	url = https://github.com/nvie/vim-pyunit.git
+[submodule "bundle/vim-gf-python"]
+	path = bundle/vim-gf-python
+	url = https://github.com/mkomitee/vim-gf-python.git
