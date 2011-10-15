@@ -37,9 +37,6 @@
 [submodule "bundle/OmniCppComplete"]
 	path = bundle/OmniCppComplete
 	url = https://github.com/vim-scripts/OmniCppComplete.git
-[submodule "others/javacomplete"]
-	path = others/javacomplete
-	url = https://github.com/vim-scripts/javacomplete
 [submodule "others/scala-vim-support"]
 	path = others/scala-vim-support
 	url = https://github.com/vgod/scala-vim-support.git
