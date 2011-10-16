@@ -13,9 +13,11 @@
 "
 
 
-" SECTION: Vim Settings {{{1
+" SECTION: Settings Prior to other settings{{{1
 "============================================================
+"
 " For pathogen.vim: auto load all plugins in .vim/bundle
+" NOTE: new pathogen has different way
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -25,7 +27,7 @@ call pathogen#helptags()
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
 
-" SECTION: General Settings {{{1
+" SECTION: General Settings{{{1
 "============================================================
 set nocompatible            " not compatible with the old-fashion vi mode
 set bs=2                    " allow backspacing over everything in insert mode
@@ -44,7 +46,7 @@ set tm=500                  " time in milliseconds waited for a key/mapping to c
 syntax on                   " syntax highlight
 
 
-" Status line Settings{
+" SECTION: Status line Settings{{{2
 set laststatus=2
 set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \ 
 set statusline+=\ \ \ [%{&ff}/%Y] 
@@ -63,26 +65,23 @@ function! HasPaste()
         return ''
     endif
 endfunction
-"}
 
 
-" Search Settings{
+" SECTION: Search Settings{{{2
 set hlsearch                " search highlighting
 set incsearch               " incremental search
 set showmatch               " Cursor shows matching
 set ignorecase              " ignore case when searching
 set smartcase               " ignore case if search pattern is all lowercase,case-sensitive otherwise
-"}
 
 
-" Filetype Settings{
+" SECTION: Filetype Settings{{{2
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
-"}
 
 
-" Color Settings{
+" SECTION: Color Settings{{{2
 if has("gui_running")
 " GUI color and font settings
     set guifont=Osaka-Mono:h20
@@ -95,25 +94,23 @@ else
 " terminal color settings
     colors vgod
 endif
-"}
 
 
-" Window Settings{
+" SECTION: Window Settings{{{2
 set wmw=0                     " set the min width of a window to 0 so we can maximize others 
 set wmh=0                     " set the min height of a window to 0 so we can maximize others
 
-" move to and maximize the below split 
 map <C-J> <C-W>j<C-W>_
-" move to and maximize the above split 
+" move to and maximize the below split 
 map <C-K> <C-W>k<C-W>_
-" move to and maximize the left split 
+" move to and maximize the above split 
 nmap <C-H> <c-w>h<c-w><bar>
-" move to and maximize the right split  
+" move to and maximize the left split 
 nmap <C-L> <c-w>l<c-w><bar>
-" }
+" move to and maximize the right split  
 
 
-" Tab Page Settings{
+" SECTION: Tab Page Settings{{{2
 map <C-t><C-t> :tabnew<CR>
 " new tab
 map <C-t><C-w> :tabclose<CR> 
@@ -123,10 +120,9 @@ map <C-]> gT
 " go to prev tab 
 map <C-\> gt
 " go to next tab
-" }
 
 
-" Encoding Settings{
+" SECTION: Encoding Settings{{{2
 set encoding=utf-8                                  
 set termencoding=utf-8
 set fileencoding=utf-8
@@ -148,10 +144,9 @@ fun! Big5()
         set encoding=big5
         set fileencoding=big5
 endfun
-"}
 
 
-" <TAB> Settings{
+" SECTION: <TAB> Settings{{{2
 set expandtab               "replace <TAB> with spaces
 set softtabstop=4 
 set shiftwidth=4 
@@ -165,30 +160,19 @@ vnoremap < <gv
 vnoremap > >gv
 
 au FileType Makefile set noexpandtab
-"}                                                              
 
 
-" Sound Settings{
+" SECTION: Sound Settings{{{2
 set noerrorbells            " disable sound on errors
 "set novisualbell            " disable visual bell
 "set t_vb=
-"}
 
 
-" actionscript 3 file type
-autocmd BufRead *.as set filetype=actionscript
-
-" C/C++ specific settings
-autocmd FileType c,cpp,cc  set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
-
+" SECTION: Other Settings{{{2
 "Restore cursor to file position in previous editing session
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
-
-"--------------------------------------------------------------------------- 
-" USEFUL SHORTCUTS
-"--------------------------------------------------------------------------- 
 " set leader to ,
 let mapleader=","
 let g:mapleader=","
@@ -212,9 +196,29 @@ nmap <leader>/ :nohl<CR>
 " ,p toggles paste mode
 nmap <leader>p :set paste!<BAR>set paste?<CR>
 
-"--------------------------------------------------------------------------- 
-" PROGRAMMING SHORTCUTS
-"--------------------------------------------------------------------------- 
+
+" SECTION: Programming Settings{{{1
+"============================================================
+"
+
+" SECTION: Enable omni completion. (Ctrl-X Ctrl-O){{{2
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType c set omnifunc=ccomplete#Complete
+autocmd FileType java set omnifunc=javacomplete#Complete
+
+" make CSS omnicompletion work for SASS and SCSS
+autocmd BufNewFile,BufRead *.scss             set ft=scss.css
+autocmd BufNewFile,BufRead *.sass             set ft=sass.css
+
+
+" actionscript 3 file type
+autocmd BufRead *.as set filetype=actionscript
+
+" C/C++ specific settings
+autocmd FileType c,cpp,cc  set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
 
 " Ctrl-[ jump out of the tag stack (undo Ctrl-])
 map <C-[> <ESC>:po<CR>
@@ -231,14 +235,6 @@ endfun
 
 
 
-" Enable omni completion. (Ctrl-X Ctrl-O)
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType java set omnifunc=javacomplete#Complete
-
 " use syntax complete if nothing else available
 if has("autocmd") && exists("+omnifunc")
   autocmd Filetype *
@@ -248,14 +244,11 @@ if has("autocmd") && exists("+omnifunc")
 endif
 
 
-" make CSS omnicompletion work for SASS and SCSS
-autocmd BufNewFile,BufRead *.scss             set ft=scss.css
-autocmd BufNewFile,BufRead *.sass             set ft=sass.css
 
+" SECTION: Plugin Settings{{{1
+"============================================================
+"
 
-"--------------------------------------------------------------------------- 
-" PLUGIN SETTINGS
-"--------------------------------------------------------------------------- 
 
 " ------- vim-latex - many latex shortcuts and snippets {
 
