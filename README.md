@@ -62,11 +62,11 @@ PLUGINS
         * python 2.3+
     * commands:
         * :ConqueTerm [bash|Powershell.exe|python|mysql -h localhost -u joe -p sock_collection]
-        * :ConqueTermSplit <command> 
-        * :ConqueTermVSplit <command> 
-        * :ConqueTermTab <command> 
+        * :ConqueTermSplit *command* 
+        * :ConqueTermVSplit *command* 
+        * :ConqueTermTab *command* 
     * shortcuts in the shell:
-        * <F9> to send a visual selection from any buffer to the shell.
+        * F9 to send a visual selection from any buffer to the shell.
 
 * [matchit](http://www.vim.org/scripts/script.php?script_id=39) [github](https://github.com/vim-scripts/matchit.zip): Extended % matching for HTML, LaTeX, and many other languages. 
 
@@ -76,24 +76,24 @@ PLUGINS
     * commands:
         * |NERDComInsertComment| Adds comment delimiters at the current cursor position and inserts between.  Disabled by default. 
     * commands with shortcuts:
-        * [count]<leader>cc |NERDComComment| Comment out the current line or text selected in visual mode. 
-        * [count]<leader>cn |NERDComNestedComment| Same as <leader>cc but forces nesting. 
-        * [count]<leader>c<space> |NERDComToggleComment| Toggles the comment state of the selected line(s).
-        * [count]<leader>cm |NERDComMinimalComment| Comments the given lines using only one set of multipart delimiters. 
-        * [count]<leader>ci |NERDComInvertComment| Toggles the comment state of the selected line(s) individually. 
-        * [count]<leader>cs |NERDComSexyComment| Comments out the selected lines ``sexily'' 
-        * [count]<leader>cy |NERDComYankComment| Same as <leader>cc except that the commented line(s) are yanked first. 
-        * <leader>c$ |NERDComEOLComment| Comments the current line from the cursor to the end of line. 
-        * <leader>cA |NERDComAppendComment| Adds comment delimiters to the end of line and goes into insert mode between them. 
-        * <leader>ca |NERDComAltDelim| Switches to the alternative set of delimiters. 
-        * [count]<leader>cl 
-        * [count]<leader>cb |NERDComAlignedComment| Same as |NERDComComment| except that the delimiters are aligned down the left side (<leader>cl) or both sides (<leader>cb). 
-        * [count]<leader>cu |NERDComUncommentLine| Uncomments the selected line(s). 
+        * *leader*-cc |NERDComComment| Comment out the current line or text selected in visual mode. 
+        * *leader*-cn |NERDComNestedComment| Same as *leader*-cc but forces nesting. 
+        * *leader*-c<space> |NERDComToggleComment| Toggles the comment state of the selected line(s).
+        * *leader*-cm |NERDComMinimalComment| Comments the given lines using only one set of multipart delimiters. 
+        * *leader*-ci |NERDComInvertComment| Toggles the comment state of the selected line(s) individually. 
+        * *leader*-cs |NERDComSexyComment| Comments out the selected lines ``sexily'' 
+        * *leader*-cy |NERDComYankComment| Same as *leader*-cc except that the commented line(s) are yanked first. 
+        * *leader*-c$ |NERDComEOLComment| Comments the current line from the cursor to the end of line. 
+        * *leader*-cA |NERDComAppendComment| Adds comment delimiters to the end of line and goes into insert mode between them. 
+        * *leader*-ca |NERDComAltDelim| Switches to the alternative set of delimiters. 
+        * *leader*-cl 
+        * *leader*-cb |NERDComAlignedComment| Same as |NERDComComment| except that the delimiters are aligned down the left side (*leader*-cl) or both sides (*leader*-cb). 
+        * *leader*-cu |NERDComUncommentLine| Uncomments the selected line(s). 
 
 * [Nerd Tree](http://www.vim.org/scripts/script.php?script_id=1658) [github](https://github.com/scrooloose/nerdtree): A tree explorer plugin for navigating the filesystem.
     * commands:
-        * :NERDTree [<start-directory> | <bookmark>] to open the NerdTree.
-        * :NERDTreeToggle [<start-directory> | <bookmark>]
+        * :NERDTree [start-directory | bookmark] to open the NerdTree.
+        * :NERDTreeToggle [start-directory | bookmark]
     * shortcuts in the NerdTree window:
         * o.......Open files, directories and bookmarks....................|NERDTree-o|
         * go......Open selected file, but leave cursor in the NERDTree.....|NERDTree-go|
@@ -145,24 +145,49 @@ PLUGINS
 * [pydoc](http://www.vim.org/scripts/script.php?script_id=910) [github](https://github.com/fs111/pydoc.vim): Python documentation view- and search-tool (uses pydoc).
     * commands:
         * :Pydoc re.compile
+    * shortcuts:
+        * *leader*-pw, *leader*-pW: confliting with *leader*-p right now.
 
-* python_fn
-* python_ifold
-* python_setting
-* pythoncomplete
+* [python_fn](http://www.vim.org/scripts/script.php?script_id=30): A set of menus/shortcuts to work with Python files.
+    * shortcuts:
+        * ]t      -- Jump to top of block
+        * ]b      -- Jump to bottom of block
+        * ]v      -- Select (Visual Line Mode) block
+        * ]<      -- Shift block to left
+        * ]>      -- Shift block to right
+        * ]#      -- Comment selection
+        * ]u      -- Uncomment selection
+        * ]c      -- Select current/previous class
+        * ]d      -- Select current/previous function
+        * ]-UP    -- Jump to previous line with the same/lower indentation
+        * ]-DOWN  -- Jump to next line with the same/lower indentation"""""""""""
+* [python_ifold](http://www.vim.org/scripts/script.php?script_id=2002): Improved version of python_fold. Uses folding expression for python code. 
 
-* [vim-surround](https://github.com/tpope/vim-surround/blob/master/doc/surround.txt): deal with pairs of surroundings.
+* python_setting: Other python settings.
 
-* [xmledit](http://www.vim.org/scripts/script.php?script_id=301): XML/HTML tags will be completed automatically.
+* [pythoncomplete](http://www.vim.org/scripts/script.php?script_id=1542): Python Omni Completion.
 
-* [snipMate](http://www.vim.org/scripts/script.php?script_id=2540): TextMate-style snippets for Vim
+* [sessionman](http://www.vim.org/scripts/script.php?script_id=2010): Vim session manager.
 
-* [VisIncr](http://www.vim.org/scripts/script.php?script_id=670): Produce increasing/decreasing columns of numbers, dates, or daynames.
-  
-* [Cute Error Marker](http://www.vim.org/scripts/script.php?script_id=2653): showing error and warning icons on line.
-  
+* [snipMate](http://www.vim.org/scripts/script.php?script_id=2540) [github](https://github.com/msanders/snipmate.vim): TextMate-style snippets for Vim
+    * shortkeys:
+        * type the triggering press TAB to bring out the code snippet.
+
+* [surround](http://www.vim.org/scripts/script.php?script_id=1697) [github](https://github.com/tpope/vim-surround/): Delete/change/add parentheses/quotes/XML-tags/much more with ease.
+
+* [taglist](http://www.vim.org/scripts/script.php?script_id=273): Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc).
+    * shortkeys:
+        * F8 to toggle the taglist window.
+
+* [vcscommand](http://www.vim.org/scripts/script.php?script_id=90) [git](http://repo.or.cz/r/vcscommand.git): CVS/SVN/SVK/git/hg/bzr integration plugin
+
+* [vim-gf-python](https://github.com/mkomitee/vim-gf-python): Goto File for Python.
+
 * [vim-latex](http://vim-latex.sourceforge.net/): Latex support.
 
+* [vim-pep8](https://github.com/nvie/vim-pep8): Vim filetype plugin for running PEP8 on Python files.
+    * shortkeys:
+        * F6 to run pep8 on the opened .py file.
 
 
 Other good references
