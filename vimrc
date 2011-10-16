@@ -1,5 +1,5 @@
 "
-" drake's vimrc
+" drakeguan's vimrc
 " Shuen-Huei (Drake) Guan <drake.guan@gmail.com>
 " Fork me on GITHUB  https://github.com/drakeguan/vimrc
 " 
@@ -11,21 +11,22 @@
 " Tsung-Hsiang (Sean) Chang <vgod@vgod.tw>
 " Fork me on GITHUB  https://github.com/vgod/vimrc
 "
-" read https://github.com/vgod/vimrc/blob/master/README.md for more info
 
 
-" For pathogen.vim: auto load all plugins in .vim/bundle{
+" SECTION: Vim Settings {{{1
+"============================================================
+" For pathogen.vim: auto load all plugins in .vim/bundle
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
-"}
 
 
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
 
-" General Settings{
+" SECTION: General Settings {{{1
+"============================================================
 set nocompatible            " not compatible with the old-fashion vi mode
 set bs=2                    " allow backspacing over everything in insert mode
 set history=50              " keep 50 lines of command line history
@@ -41,7 +42,6 @@ set nobackup                " no *~ backup files
 set wildignore=*.o,*.class,*.pyc    " ignore these files while expanding wild chars
 set tm=500                  " time in milliseconds waited for a key/mapping to complete
 syntax on                   " syntax highlight
-"}
 
 
 " Status line Settings{
@@ -313,3 +313,5 @@ let g:ConqueTerm_TERM = 'xterm'
 "    let $PYTHONPATH .= ":".$HOME."/.vim/ropevim/pylibs"
 "    source $HOME/.vim/ropevim/src/ropevim/ropevim.vim
 "endif
+
+" vim: set fdm=marker:
