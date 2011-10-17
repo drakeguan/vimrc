@@ -2,7 +2,7 @@
 let python_highlight_all = 1
 
 " Smartindent 
-autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+autocmd BufRead *.py set et smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 
 " Auto completion
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
