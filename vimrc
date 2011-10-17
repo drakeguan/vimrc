@@ -99,7 +99,7 @@ endif
 " SECTION: Tab Page Settings{{{2
 map <C-t><C-t> :tabnew<CR>
 " new tab
-map <C-t><C-w> :tabclose<CR> 
+map <C-t><C-w> :tabclose<CR>
 " close tab
 
 map <C-]> gT
@@ -112,14 +112,14 @@ map <C-\> gt
 set wmw=0                     " set the min width of a window to 0 so we can maximize others 
 set wmh=0                     " set the min height of a window to 0 so we can maximize others
 
-map <C-J> <C-W>j<C-W>_
+nmap <C-J> <C-W>j<C-W>_
 " move to and maximize the below split 
-map <C-K> <C-W>k<C-W>_
+nmap <C-K> <C-W>k<C-W>_
 " move to and maximize the above split 
 nmap <C-H> <c-w>h<c-w><bar>
 " move to and maximize the left split 
 nmap <C-L> <c-w>l<c-w><bar>
-" move to and maximize the right split  
+" move to and maximize the right split
 
 
 " SECTION: Encoding Settings{{{2
@@ -189,9 +189,9 @@ let g:mapleader=","
 nmap <leader>/ :set hls!<CR>
 
 "" Bash like keys for the command line
-"cnoremap <C-A>      <Home>
-"cnoremap <C-E>      <End>
-"cnoremap <C-K>      <C-U>
+cnoremap <C-A>      <Home>
+cnoremap <C-E>      <End>
+cnoremap <C-K>      <C-U>
 
 " ,p toggles paste mode
 nmap <leader>p :set paste!<BAR>set paste?<CR>
@@ -202,37 +202,35 @@ nmap <leader>p :set paste!<BAR>set paste?<CR>
 "
 
 " SECTION: Enable omni completion. (Ctrl-X Ctrl-O){{{2
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType c set omnifunc=ccomplete#Complete
-autocmd FileType java set omnifunc=javacomplete#Complete
+autocmd FileType html,markdown      setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript         setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType xml                setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType css                setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType c                  setlocal omnifunc=ccomplete#Complete
+autocmd FileType java               setlocal omnifunc=javacomplete#Complete
 
 " make CSS omnicompletion work for SASS and SCSS
-autocmd BufNewFile,BufRead *.scss             set ft=scss.css
-autocmd BufNewFile,BufRead *.sass             set ft=sass.css
-
+autocmd BufNewFile,BufRead *.scss   setlocal ft=scss.css
+autocmd BufNewFile,BufRead *.sass   setlocal ft=sass.css
 
 " actionscript 3 file type
-autocmd BufRead *.as set filetype=actionscript
+autocmd BufNewFile,BufRead *.as     setlocal ft=actionscript
 
 " C/C++ specific settings
 autocmd FileType c,cpp,cc  set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
 
 " Ctrl-[ jump out of the tag stack (undo Ctrl-])
-map <C-[> <ESC>:po<CR>
+"map <C-[> <ESC>:po<CR>
 
 " ,g generates the header guard
-map <leader>g :call IncludeGuard()<CR>
-fun! IncludeGuard()
-   let basename = substitute(bufname(""), '.*/', '', '')
-   let guard = '_' . substitute(toupper(basename), '\.', '_', "H")
-   call append(0, "#ifndef " . guard)
-   call append(1, "#define " . guard)
-   call append( line("$"), "#endif // for #ifndef " . guard)
-endfun
-
+"map <leader>g :call IncludeGuard()<CR>
+"fun! IncludeGuard()
+"   let basename = substitute(bufname(""), '.*/', '', '')
+"   let guard = '_' . substitute(toupper(basename), '\.', '_', "H")
+"   call append(0, "#ifndef " . guard)
+"   call append(1, "#define " . guard)
+"   call append( line("$"), "#endif // for #ifndef " . guard)
+"endfun
 
 
 " use syntax complete if nothing else available
@@ -266,18 +264,18 @@ let g:tex_flavor='latex'
 
 " --- AutoClose - Inserts matching bracket, paren, brace or quote 
 " fixed the arrow key problems caused by AutoClose
-if !has("gui_running")        
-   set term=linux
-   imap OA <ESC>ki
-   imap OB <ESC>ji
-   imap OC <ESC>li
-   imap OD <ESC>hi
-
-   nmap OA k
-   nmap OB j
-   nmap OC l
-   nmap OD h
-endif
+"if !has("gui_running")        
+"   set term=linux
+"   imap OA <ESC>ki
+"   imap OB <ESC>ji
+"   imap OC <ESC>li
+"   imap OD <ESC>hi
+"
+"   nmap OA k
+"   nmap OB j
+"   nmap OC l
+"   nmap OD h
+"endif
 
 
 " --- pydiction
@@ -289,7 +287,7 @@ let g:pydiction_location = $HOME."/.vim/bundle/pydiction/complete-dict"
 
 
 " --- SuperTab
-let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "context"
 
 
 " --- taglist
