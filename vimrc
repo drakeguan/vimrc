@@ -17,7 +17,7 @@
 "============================================================
 "
 " For pathogen.vim: auto load all plugins in .vim/bundle
-" NOTE: new pathogen has different way
+" NOTE: new pathogen has different way to start up.
 filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -96,6 +96,18 @@ else
 endif
 
 
+" SECTION: Tab Page Settings{{{2
+map <C-t><C-t> :tabnew<CR>
+" new tab
+map <C-t><C-w> :tabclose<CR> 
+" close tab
+
+map <C-]> gT
+" go to prev tab 
+map <C-\> gt
+" go to next tab
+
+
 " SECTION: Window Settings{{{2
 set wmw=0                     " set the min width of a window to 0 so we can maximize others 
 set wmh=0                     " set the min height of a window to 0 so we can maximize others
@@ -108,18 +120,6 @@ nmap <C-H> <c-w>h<c-w><bar>
 " move to and maximize the left split 
 nmap <C-L> <c-w>l<c-w><bar>
 " move to and maximize the right split  
-
-
-" SECTION: Tab Page Settings{{{2
-map <C-t><C-t> :tabnew<CR>
-" new tab
-map <C-t><C-w> :tabclose<CR> 
-" close tab
-
-map <C-]> gT
-" go to prev tab 
-map <C-\> gt
-" go to next tab
 
 
 " SECTION: Encoding Settings{{{2
@@ -185,8 +185,8 @@ let g:mapleader=","
 "map <leader>[ :cp<CR>
 
 
-" ,/ turn off search highlighting
-nmap <leader>/ :nohl<CR>
+" ,/ toggles search highlighting
+nmap <leader>/ :set hls!<CR>
 
 "" Bash like keys for the command line
 "cnoremap <C-A>      <Home>
