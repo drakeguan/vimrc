@@ -63,4 +63,4 @@
 	url = https://github.com/nvie/vim-pep8.git
 [submodule "bundle/vim-gf-python"]
 	path = bundle/vim-gf-python
-	url = https://github.com/mkomitee/vim-gf-python.git
+	url = git@github.com:drakeguan/vim-gf-python.git
