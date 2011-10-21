@@ -42,9 +42,9 @@ Use of original pathogen might need you to change your vimrc a little.
 PLUGINS
 -------
 
-* [OmniCppComplete](http://www.vim.org/scripts/script.php?script_id=1520) [github](https://github.com/vim-scripts/OmniCppComplete.git): C/C++ omni-completion with ctags database.
+* [OmniCppComplete](http://www.vim.org/scripts/script.php?script_id=1520) @[github](https://github.com/vim-scripts/OmniCppComplete.git): C/C++ omni-completion with ctags database.
 
-* [ack](http://www.vim.org/scripts/script.php?script_id=2572) [github](https://github.com/mileszs/ack.vim.git): A front for the Perl module App::Ack. Ack can be used as a replacement for 99% of the uses of grep.
+* [ack](http://www.vim.org/scripts/script.php?script_id=2572) @[github](https://github.com/mileszs/ack.vim.git): A front for the Perl module App::Ack. Ack can be used as a replacement for 99% of the uses of grep.
     * commands:
         * :Ack, :AckAdd, :LAck, and :LAckAdd
     * shortcuts in quickfix:
@@ -54,7 +54,7 @@ PLUGINS
         * T to open in new tab silently
         * q to close the quickfix window
 
-* [AutoClose](http://www.vim.org/scripts/script.php?script_id=1849) [github](https://github.com/Townk/vim-autoclose): Inserts matching bracket, paren, brace or quote.
+* [AutoClose](http://www.vim.org/scripts/script.php?script_id=1849) @[github](https://github.com/Townk/vim-autoclose): Inserts matching bracket, paren, brace or quote.
 
 * [Conque Shell](http://www.vim.org/scripts/script.php?script_id=2771): Run interactive commands inside a Vim buffer.
     * requirements:
@@ -68,11 +68,11 @@ PLUGINS
     * shortcuts in the shell:
         * F9 to send a visual selection from any buffer to the shell.
 
-* [matchit](http://www.vim.org/scripts/script.php?script_id=39) [github](https://github.com/vim-scripts/matchit.zip): Extended % matching for HTML, LaTeX, and many other languages. 
+* [matchit](http://www.vim.org/scripts/script.php?script_id=39) @[github](https://github.com/vim-scripts/matchit.zip): Extended % matching for HTML, LaTeX, and many other languages. 
 
 * nb-pylint: My colleague, nobirmd, developed for pylint integration. :call Pylint()
 
-* [Nerd Commenter](http://www.vim.org/scripts/script.php?script_id=1218) [github](https://github.com/scrooloose/nerdcommenter.git): A plugin that allows for easy commenting of code for many filetypes. 
+* [Nerd Commenter](http://www.vim.org/scripts/script.php?script_id=1218) @[github](https://github.com/scrooloose/nerdcommenter.git): A plugin that allows for easy commenting of code for many filetypes. 
     * commands:
         * |NERDComInsertComment| Adds comment delimiters at the current cursor position and inserts between.  Disabled by default. 
     * commands with shortcuts:
@@ -90,7 +90,7 @@ PLUGINS
         * *leader*-cb |NERDComAlignedComment| Same as |NERDComComment| except that the delimiters are aligned down the left side (*leader*-cl) or both sides (*leader*-cb). 
         * *leader*-cu |NERDComUncommentLine| Uncomments the selected line(s). 
 
-* [Nerd Tree](http://www.vim.org/scripts/script.php?script_id=1658) [github](https://github.com/scrooloose/nerdtree): A tree explorer plugin for navigating the filesystem.
+* [Nerd Tree](http://www.vim.org/scripts/script.php?script_id=1658) @[github](https://github.com/scrooloose/nerdtree): A tree explorer plugin for navigating the filesystem.
     * commands:
         * :NERDTree [start-directory | bookmark] to open the NerdTree.
         * :NERDTreeToggle [start-directory | bookmark]
@@ -142,7 +142,7 @@ PLUGINS
         * SPACE: Accept the currently selected match and insert a space.
         * Ctrl-E: Close the menu and not accept any match. Ctrl-Y: Accept the currently selected match and stop completion.
 
-* [pydoc](http://www.vim.org/scripts/script.php?script_id=910) [github](https://github.com/fs111/pydoc.vim): Python documentation view- and search-tool (uses pydoc).
+* [pydoc](http://www.vim.org/scripts/script.php?script_id=910) @[github](https://github.com/fs111/pydoc.vim): Python documentation view- and search-tool (uses pydoc).
     * commands:
         * :Pydoc re.compile
     * shortcuts:
@@ -169,23 +169,30 @@ PLUGINS
 
 * [sessionman](http://www.vim.org/scripts/script.php?script_id=2010): Vim session manager.
 
-* [snipMate](http://www.vim.org/scripts/script.php?script_id=2540) [github](https://github.com/msanders/snipmate.vim): TextMate-style snippets for Vim
+* [snipMate](http://www.vim.org/scripts/script.php?script_id=2540) @[github](https://github.com/msanders/snipmate.vim): TextMate-style snippets for Vim
     * shortkeys:
         * type the triggering press TAB to bring out the code snippet.
 
-* [surround](http://www.vim.org/scripts/script.php?script_id=1697) [github](https://github.com/tpope/vim-surround/): Delete/change/add parentheses/quotes/XML-tags/much more with ease.
+* [surround](http://www.vim.org/scripts/script.php?script_id=1697) @[github](https://github.com/tpope/vim-surround/): Delete/change/add parentheses/quotes/XML-tags/much more with ease.
 
 * [taglist](http://www.vim.org/scripts/script.php?script_id=273): Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc).
     * shortkeys:
         * F8 to toggle the taglist window.
 
-* [vcscommand](http://www.vim.org/scripts/script.php?script_id=90) [git](http://repo.or.cz/r/vcscommand.git): CVS/SVN/SVK/git/hg/bzr integration plugin
+* [vcscommand](http://www.vim.org/scripts/script.php?script_id=90) @[git](http://repo.or.cz/r/vcscommand.git): CVS/SVN/SVK/git/hg/bzr integration plugin
 
-* [vim-gf-python](https://github.com/mkomitee/vim-gf-python): Goto File for Python.
+* [vim-gf-python](https://github.com/mkomitee/vim-gf-python) @[github](https://drakeguan@github.com/drakeguan/vim-gf-python.git): Goto File for Python.
+    * shortkeys:
+        * `gf`: open in the same window ("goto file")
+        * `<C-W>f`: open in a new window
+        * `<C-W><C-V>f`: open in a new vertical window
+        * `<C-W>gf`: open in a new tabpage
 
 * [vim-latex](http://vim-latex.sourceforge.net/): Latex support.
 
 * [vim-pep8](https://github.com/nvie/vim-pep8): Vim filetype plugin for running PEP8 on Python files.
+    * requirements:
+        * [pep8](http://pypi.python.org/pypi/pep8)
     * shortkeys:
         * F6 to run pep8 on the opened .py file.
 
