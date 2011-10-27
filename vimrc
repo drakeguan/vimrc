@@ -20,7 +20,7 @@
 " NOTE: new pathogen has different way to start up.
 filetype off
 call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+"call pathogen#helptags()
 
 
 " auto reload vimrc when editing it
