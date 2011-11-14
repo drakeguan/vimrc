@@ -19,8 +19,9 @@
 " For pathogen.vim: auto load all plugins in .vim/bundle
 " NOTE: new pathogen has different way to start up.
 filetype off
-call pathogen#runtime_append_all_bundles()
+"call pathogen#runtime_append_all_bundles()
 "call pathogen#helptags()
+call pathogen#infect()
 
 
 " auto reload vimrc when editing it
