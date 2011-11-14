@@ -7,10 +7,10 @@
 " Bugfixes: Jean-Pierre Chauvel
 
 
-if exists("b:did_ftplugin")
+if exists("b:loaded_python_ifold")
     finish
 endif
-let b:did_ftplugin = 1 
+let b:loaded_python_ifold = 1 
 
 if !exists("g:ifold_mode")
     let g:ifold_mode = 1
