@@ -28,9 +28,6 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = http://github.com/mileszs/ack.vim.git
-[submodule "bundle/vim-pep8"]
-	path = bundle/vim-pep8
-	url = http://github.com/nvie/vim-pep8.git
 [submodule "available/autoclose"]
 	path = available/autoclose
 	url = git@github.com:drakeguan/vim-autoclose.git
@@ -70,3 +67,6 @@
 [submodule "available/taglist"]
 	path = available/taglist
 	url = git@github.com:drakeguan/vim-taglist.vim.git
+[submodule "available/pep8"]
+	path = available/pep8
+	url = git@github.com:drakeguan/vim-pep8.git
