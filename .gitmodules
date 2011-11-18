@@ -22,9 +22,6 @@
 [submodule "autoload"]
 	path = autoload
 	url = git@github.com:drakeguan/vim-pathogen.git
-[submodule "bundle/vcscommand"]
-	path = bundle/vcscommand
-	url = http://repo.or.cz/r/vcscommand.git
 [submodule "bundle/pydoc"]
 	path = bundle/pydoc
 	url = http://github.com/fs111/pydoc.vim.git
@@ -36,16 +33,16 @@
 	url = http://github.com/nvie/vim-pep8.git
 [submodule "available/autoclose"]
 	path = available/autoclose
-	url = https://drakeguan@github.com/drakeguan/vim-autoclose.git
+	url = git@github.com:drakeguan/vim-autoclose.git
 [submodule "available/matchit"]
 	path = available/matchit
-	url = https://drakeguan@github.com/drakeguan/vim-matchit.zip.git
+	url = git@github.com:drakeguan/vim-matchit.zip.git
 [submodule "available/gf-python"]
 	path = available/gf-python
-	url = https://drakeguan@github.com/drakeguan/vim-gf-python.git
+	url = git@github.com:drakeguan/vim-gf-python.git
 [submodule "available/markdown"]
 	path = available/markdown
-	url = https://drakeguan@github.com/drakeguan/vim-markdown.git
+	url = git@github.com:drakeguan/vim-markdown.git
 [submodule "available/vcscommand"]
 	path = available/vcscommand
-	url = https://drakeguan@github.com/drakeguan/vim-vcscommand.git
+	url = git@github.com:drakeguan/vim-vcscommand.git
