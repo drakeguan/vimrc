@@ -4,18 +4,12 @@
 [submodule "bundle/smart-parentheses"]
 	path = bundle/smart-parentheses
 	url = http://github.com/vim-scripts/Smart-Parentheses.git
-[submodule "bundle/autoclose"]
-	path = bundle/autoclose
-	url = http://github.com/Townk/vim-autoclose.git
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = http://github.com/tpope/vim-surround.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = http://github.com/msanders/snipmate.vim.git
-[submodule "bundle/matchit"]
-	path = bundle/matchit
-	url = http://github.com/vim-scripts/matchit.zip.git
 [submodule "bundle/OmniCppComplete"]
 	path = bundle/OmniCppComplete
 	url = http://github.com/vim-scripts/OmniCppComplete.git
@@ -40,9 +34,18 @@
 [submodule "bundle/vim-pep8"]
 	path = bundle/vim-pep8
 	url = http://github.com/nvie/vim-pep8.git
-[submodule "available/vim-markdown"]
-	path = available/vim-markdown
-	url = https://drakeguan@github.com/drakeguan/vim-markdown.git
-[submodule "available/vim-gf-python"]
-	path = available/vim-gf-python
+[submodule "available/autoclose"]
+	path = available/autoclose
+	url = https://drakeguan@github.com/drakeguan/vim-autoclose.git
+[submodule "available/matchit"]
+	path = available/matchit
+	url = https://drakeguan@github.com/drakeguan/vim-matchit.zip.git
+[submodule "available/gf-python"]
+	path = available/gf-python
 	url = https://drakeguan@github.com/drakeguan/vim-gf-python.git
+[submodule "available/markdown"]
+	path = available/markdown
+	url = https://drakeguan@github.com/drakeguan/vim-markdown.git
+[submodule "available/vcscommand"]
+	path = available/vcscommand
+	url = https://drakeguan@github.com/drakeguan/vim-vcscommand.git
