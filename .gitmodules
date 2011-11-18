@@ -1,9 +1,6 @@
 [submodule "bundle/vim-latex"]
 	path = bundle/vim-latex
 	url = git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex/
-[submodule "bundle/smart-parentheses"]
-	path = bundle/smart-parentheses
-	url = http://github.com/vim-scripts/Smart-Parentheses.git
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = http://github.com/tpope/vim-surround.git
@@ -70,3 +67,6 @@
 [submodule "available/pep8"]
 	path = available/pep8
 	url = git@github.com:drakeguan/vim-pep8.git
+[submodule "available/Smart-Parentheses"]
+	path = available/Smart-Parentheses
+	url = git@github.com:drakeguan/vim-Smart-Parentheses.git
