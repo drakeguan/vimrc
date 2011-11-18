@@ -7,39 +7,18 @@
 [submodule "bundle/autoclose"]
 	path = bundle/autoclose
 	url = http://github.com/Townk/vim-autoclose.git
-[submodule "others/command-t"]
-	path = others/command-t
-	url = http://github.com/wincent/Command-T.git
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = http://github.com/tpope/vim-surround.git
-[submodule "others/CuteErrorMarker"]
-	path = others/CuteErrorMarker
-	url = http://github.com/Twinside/vim-cuteErrorMarker.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = http://github.com/msanders/snipmate.vim.git
-[submodule "others/yankring"]
-	path = others/yankring
-	url = http://github.com/vim-scripts/YankRing.vim.git
-[submodule "others/VisIncr"]
-	path = others/VisIncr
-	url = http://github.com/vim-scripts/VisIncr.git
-[submodule "others/xmledit"]
-	path = others/xmledit
-	url = http://github.com/sukima/xmledit.git
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = http://github.com/vim-scripts/matchit.zip.git
-[submodule "others/supertab"]
-	path = others/supertab
-	url = http://github.com/ervandew/supertab.git
 [submodule "bundle/OmniCppComplete"]
 	path = bundle/OmniCppComplete
 	url = http://github.com/vim-scripts/OmniCppComplete.git
-[submodule "others/scala-vim-support"]
-	path = others/scala-vim-support
-	url = http://github.com/vgod/scala-vim-support.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = http://github.com/scrooloose/nerdtree.git
