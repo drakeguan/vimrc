@@ -292,13 +292,18 @@ let g:pydiction_location = $HOME."/.vim/bundle/pydiction/complete-dict"
 
 
 " --- taglist
-nnoremap <silent> <F8> :TlistToggle<CR>
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_GainFocus_On_ToggleOpen = 1
+"nnoremap <silent> <F8> :TlistToggle<CR>
+"let Tlist_Exit_OnlyWindow = 1
+"let Tlist_GainFocus_On_ToggleOpen = 1
+
+
+" --- tagbar
+nnoremap <silent> <F8> :TagbarToggle<CR>
 
 
 " --- conque
 let g:ConqueTerm_TERM = 'xterm'
+
 
 " --- ropevim
 "if has('python')
