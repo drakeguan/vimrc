@@ -1,30 +1,6 @@
-[submodule "bundle/vim-latex"]
-	path = bundle/vim-latex
-	url = git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex/
-[submodule "bundle/surround"]
-	path = bundle/surround
-	url = http://github.com/tpope/vim-surround.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = http://github.com/msanders/snipmate.vim.git
-[submodule "bundle/OmniCppComplete"]
-	path = bundle/OmniCppComplete
-	url = http://github.com/vim-scripts/OmniCppComplete.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = http://github.com/scrooloose/nerdtree.git
-[submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
-	url = http://github.com/scrooloose/nerdcommenter.git
 [submodule "autoload"]
 	path = autoload
 	url = git@github.com:drakeguan/vim-pathogen.git
-[submodule "bundle/pydoc"]
-	path = bundle/pydoc
-	url = http://github.com/fs111/pydoc.vim.git
-[submodule "bundle/ack"]
-	path = bundle/ack
-	url = http://github.com/mileszs/ack.vim.git
 [submodule "available/autoclose"]
 	path = available/autoclose
 	url = git@github.com:drakeguan/vim-autoclose.git
@@ -70,3 +46,36 @@
 [submodule "available/Smart-Parentheses"]
 	path = available/Smart-Parentheses
 	url = git@github.com:drakeguan/vim-Smart-Parentheses.git
+[submodule "available/tagbar"]
+	path = available/tagbar
+	url = git@github.com:drakeguan/vim-tagbar.git
+[submodule "available/surround"]
+	path = available/surround
+	url = git@github.com:drakeguan/vim-surround.git
+[submodule "available/snipmate"]
+	path = available/snipmate
+	url = git@github.com:drakeguan/vim-snipmate.vim.git
+[submodule "available/ack"]
+	path = available/ack
+	url = git@github.com:drakeguan/vim-ack.vim.git
+[submodule "available/nerdcommenter"]
+	path = available/nerdcommenter
+	url = git@github.com:drakeguan/vim-nerdcommenter.git
+[submodule "available/nerdtree"]
+	path = available/nerdtree
+	url = git@github.com:drakeguan/vim-nerdtree.git
+[submodule "available/OmniCppComplete"]
+	path = available/OmniCppComplete
+	url = git@github.com:drakeguan/vim-OmniCppComplete.git
+[submodule "available/latex"]
+	path = available/latex
+	url = git@github.com:drakeguan/vim-latex.git
+[submodule "available/conque"]
+	path = available/conque
+	url = git@github.com:drakeguan/vim-conque.git
+[submodule "available/sessionman"]
+	path = available/sessionman
+	url = git@github.com:drakeguan/vim-sessionman.vim.git
+[submodule "available/pydoc"]
+	path = available/pydoc
+	url = git@github.com:drakeguan/vim-pydoc.vim.git
