@@ -19,3 +19,5 @@ setlocal list listchars=tab:»-
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 
+" pylint
+compiler pylint
