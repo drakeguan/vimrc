@@ -79,3 +79,6 @@
 [submodule "available/pydoc"]
 	path = available/pydoc
 	url = git@github.com:drakeguan/vim-pydoc.vim.git
+[submodule "available/pylint"]
+	path = available/pylint
+	url = git@github.com:drakeguan/vim-pylint.git
