@@ -311,4 +311,17 @@ let g:ConqueTerm_TERM = 'xterm'
 "    source $HOME/.vim/ropevim/src/ropevim/ropevim.vim
 "endif
 
+
+
+" --- pylint
+"   To disable calling Pylint every
+"   time a buffer is saved put into .vimrc file
+let g:pylint_onwrite = 0
+"   Displaying code rate calculated by Pylint can be avoided by setting
+let g:pylint_show_rate = 0
+"   Openning of QuickFix window can be disabled with
+"       let g:pylint_cwindow = 0
+
+
+
 " vim: set fdm=marker:
