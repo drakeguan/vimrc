@@ -82,3 +82,6 @@
 [submodule "available/pylint"]
 	path = available/pylint
 	url = git@github.com:drakeguan/vim-pylint.git
+[submodule "available/jpythonfold"]
+	path = available/jpythonfold
+	url = git@github.com:drakeguan/vim-jpythonfold.git
