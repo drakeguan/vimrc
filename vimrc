@@ -163,7 +163,7 @@ set smarttab                " insert tabs on the start of a line according to co
 vnoremap < <gv
 vnoremap > >gv
 
-au FileType Makefile set noexpandtab
+au FileType make set noexpandtab
 
 
 " SECTION: Sound Settings{{{2
