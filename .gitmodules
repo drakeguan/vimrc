@@ -88,3 +88,6 @@
 [submodule "available/gundo"]
 	path = available/gundo
 	url = git@github.com:drakeguan/vim-gundo.vim.git
+[submodule "available/tComment"]
+	path = available/tComment
+	url = git://github.com/vim-scripts/tComment.git
