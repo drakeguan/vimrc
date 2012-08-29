@@ -93,9 +93,9 @@ else
 " terminal color settings
 "    colors vgod
 endif
-set background=dark 
+"set background=dark 
 set t_Co=256          " 256 color mode
-colors moria
+colors distinguished
 
 
 " SECTION: Tab Page Settings{{{2
