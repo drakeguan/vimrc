@@ -1,3 +1,4 @@
+" vim: set fdm=marker:
 "
 " drakeguan's vimrc
 " Shuen-Huei (Drake) Guan <drake.guan@gmail.com>
@@ -17,10 +18,7 @@
 "============================================================
 "
 " For pathogen.vim: auto load all plugins in .vim/bundle
-" NOTE: new pathogen has different way to start up.
 filetype off
-"call pathogen#runtime_append_all_bundles()
-"call pathogen#helptags()
 call pathogen#infect()
 
 
@@ -337,8 +335,7 @@ endif
 "
 
 
-" ------- vim-latex - many latex shortcuts and snippets {
-
+" --- vim-latex - many latex shortcuts and snippets{{{2
 " IMPORTANT: win32 users will need to have 'shellslash' set so that latex
 " can be called correctly.
 set shellslash
@@ -348,10 +345,8 @@ set grepprg=grep\ -nH\ $*
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
 
-"}
 
-
-" --- AutoClose - Inserts matching bracket, paren, brace or quote 
+" --- AutoClose - Inserts matching bracket, paren, brace or quote{{{2
 " fixed the arrow key problems caused by AutoClose
 "if !has("gui_running")        
 "   set term=linux
@@ -367,41 +362,40 @@ let g:tex_flavor='latex'
 "endif
 
 
-" --- pydiction
+" --- pydiction{{{2
 let g:pydiction_location = $HOME."/.vim/bundle/pydiction/complete-dict"
 
 
-" --- Command-T
+" --- Command-T{{{2
 "let g:CommandTMaxHeight = 15
 
 
-" --- SuperTab
+" --- SuperTab{{{2
 "let g:SuperTabDefaultCompletionType = "context"
 
 
-" --- taglist
+" --- taglist{{{2
 "nnoremap <silent> <F8> :TlistToggle<CR>
 "let Tlist_Exit_OnlyWindow = 1
 "let Tlist_GainFocus_On_ToggleOpen = 1
 
 
-" --- tagbar
+" --- tagbar{{{2
 nnoremap <silent> <F8> :TagbarToggle<CR>
 
 
-" --- conque
+" --- conque{{{2
 let g:ConqueTerm_TERM = 'xterm'
 
 
-" --- ropevim
+" --- ropevim{{{2
 "if has('python')
 "    let $PYTHONPATH .= ":".$HOME."/.vim/ropevim/pylibs"
 "    source $HOME/.vim/ropevim/src/ropevim/ropevim.vim
 "endif
 
 
-
-" --- pylint
+" --- pylint{{{2
 "   To disable calling Pylint every
 "   time a buffer is saved put into .vimrc file
 let g:pylint_onwrite = 0
@@ -411,5 +405,3 @@ let g:pylint_show_rate = 0
 "       let g:pylint_cwindow = 0
 
 
-
-" vim: set fdm=marker:
