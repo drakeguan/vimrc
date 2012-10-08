@@ -91,3 +91,6 @@
 [submodule "available/tComment"]
 	path = available/tComment
 	url = http://github.com/vim-scripts/tComment.git
+[submodule "available/SpellChecker"]
+	path = available/SpellChecker
+	url = https://github.com/vim-scripts/SpellChecker
