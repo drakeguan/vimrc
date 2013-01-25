@@ -198,6 +198,9 @@ cnoremap <C-K>      <C-U>
 " ,p toggles paste mode
 nmap <leader>p :set paste!<BAR>set paste?<CR>
 
+" set vimdiff to ignore whitespaces
+set diffopt+=iwhite
+
 
 " SECTION: LargeFiles Settings{{{2
 " LargeFile: Sets up an autocmd to make editing large files work with celerity
