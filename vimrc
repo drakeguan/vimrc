@@ -364,6 +364,10 @@ let g:tex_flavor='latex'
 "   nmap OD h
 "endif
 
+" disable <> for C/C++/Python
+autocmd FileType cpp let b:AutoClosePairs = AutoClose#ParsePairs("() [] {} \"")
+autocmd FileType python let b:AutoClosePairs = AutoClose#ParsePairs("() [] {} \" '")
+
 
 " --- pydiction{{{2
 let g:pydiction_location = $HOME."/.vim/bundle/pydiction/complete-dict"
