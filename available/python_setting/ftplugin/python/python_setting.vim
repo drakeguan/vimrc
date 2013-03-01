@@ -24,3 +24,9 @@ compiler pylint
 "   Above is realized with :Pylint command.
 noremap <buffer> <F5> :call Pylint(1)<CR>
 noremap! <buffer> <F5> <Esc>:call Pylint(1)<CR>
+
+
+" SECTION: <TAB> Settings{{{2
+set expandtab               "replace <TAB> with spaces
+set softtabstop=4 
+set shiftwidth=4 

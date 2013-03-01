@@ -114,14 +114,20 @@ map <C-\> gt
 set wmw=0                     " set the min width of a window to 0 so we can maximize others 
 set wmh=0                     " set the min height of a window to 0 so we can maximize others
 
-nmap <C-J> <C-W>j<C-W>_
-" move to and maximize the below split 
-nmap <C-K> <C-W>k<C-W>_
-" move to and maximize the above split 
-nmap <C-H> <c-w>h<c-w><bar>
-" move to and maximize the left split 
-nmap <C-L> <c-w>l<c-w><bar>
-" move to and maximize the right split
+" nmap <C-J> <C-W>j<C-W>_
+" " move to and maximize the below split 
+" nmap <C-K> <C-W>k<C-W>_
+" " move to and maximize the above split 
+" nmap <C-H> <c-w>h<c-w><bar>
+" " move to and maximize the left split 
+" nmap <C-L> <c-w>l<c-w><bar>
+" " move to and maximize the right split
+
+" Easy split navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 
 " SECTION: Encoding Settings{{{2
@@ -149,9 +155,9 @@ endfun
 
 
 " SECTION: <TAB> Settings{{{2
-set expandtab               "replace <TAB> with spaces
-set softtabstop=4 
-set shiftwidth=4 
+" set expandtab               "replace <TAB> with spaces
+" set softtabstop=4 
+" set shiftwidth=4 
 
 set autoindent              " auto indentation
 set copyindent              " copy the previous indentation on autoindenting
