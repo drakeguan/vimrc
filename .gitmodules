@@ -13,9 +13,6 @@
 [submodule "available/markdown"]
 	path = available/markdown
 	url = git@github.com:drakeguan/vim-markdown.git
-[submodule "available/vcscommand"]
-	path = available/vcscommand
-	url = git@github.com:drakeguan/vim-vcscommand.git
 [submodule "available/python_ifold"]
 	path = available/python_ifold
 	url = git@github.com:drakeguan/vim-python_ifold.git
