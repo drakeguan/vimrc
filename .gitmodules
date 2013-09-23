@@ -13,9 +13,6 @@
 [submodule "available/python_ifold"]
 	path = available/python_ifold
 	url = git@github.com:drakeguan/vim-python_ifold.git
-[submodule "available/supertab"]
-	path = available/supertab
-	url = git@github.com:drakeguan/vim-supertab.git
 [submodule "available/xmledit"]
 	path = available/xmledit
 	url = git@github.com:drakeguan/vim-xmledit.git
