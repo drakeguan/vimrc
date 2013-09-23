@@ -31,9 +31,6 @@
 [submodule "available/Smart-Parentheses"]
 	path = available/Smart-Parentheses
 	url = git@github.com:drakeguan/vim-Smart-Parentheses.git
-[submodule "available/tagbar"]
-	path = available/tagbar
-	url = git@github.com:drakeguan/vim-tagbar.git
 [submodule "available/surround"]
 	path = available/surround
 	url = git@github.com:drakeguan/vim-surround.git
@@ -70,3 +67,6 @@
 [submodule "available/ack"]
 	path = available/ack
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "available/tagbar"]
+	path = available/tagbar
+	url = https://github.com/majutsushi/tagbar.git
