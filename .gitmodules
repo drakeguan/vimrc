@@ -22,9 +22,6 @@
 [submodule "available/Command-T"]
 	path = available/Command-T
 	url = git@github.com:drakeguan/vim-Command-T.git
-[submodule "available/Smart-Parentheses"]
-	path = available/Smart-Parentheses
-	url = git@github.com:drakeguan/vim-Smart-Parentheses.git
 [submodule "available/surround"]
 	path = available/surround
 	url = git@github.com:drakeguan/vim-surround.git
@@ -67,3 +64,6 @@
 [submodule "available/markdown"]
 	path = available/markdown
 	url = https://github.com/hallison/vim-markdown.git
+[submodule "available/Smart-Parentheses"]
+	path = available/Smart-Parentheses
+	url = https://github.com/vim-scripts/Smart-Parentheses.git
