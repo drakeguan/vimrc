@@ -25,9 +25,6 @@
 [submodule "available/Command-T"]
 	path = available/Command-T
 	url = git@github.com:drakeguan/vim-Command-T.git
-[submodule "available/pep8"]
-	path = available/pep8
-	url = git@github.com:drakeguan/vim-pep8.git
 [submodule "available/Smart-Parentheses"]
 	path = available/Smart-Parentheses
 	url = git@github.com:drakeguan/vim-Smart-Parentheses.git
