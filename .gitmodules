@@ -7,9 +7,6 @@
 [submodule "available/gf-python"]
 	path = available/gf-python
 	url = git@github.com:drakeguan/vim-gf-python.git
-[submodule "available/markdown"]
-	path = available/markdown
-	url = git@github.com:drakeguan/vim-markdown.git
 [submodule "available/python_ifold"]
 	path = available/python_ifold
 	url = git@github.com:drakeguan/vim-python_ifold.git
@@ -67,3 +64,6 @@
 [submodule "available/pylint"]
 	path = available/pylint
 	url = https://github.com/rygwdn/vim-pylint.git
+[submodule "available/markdown"]
+	path = available/markdown
+	url = https://github.com/hallison/vim-markdown.git
