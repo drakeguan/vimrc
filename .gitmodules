@@ -70,9 +70,6 @@
 [submodule "available/conque"]
 	path = available/conque
 	url = git@github.com:drakeguan/vim-conque.git
-[submodule "available/sessionman"]
-	path = available/sessionman
-	url = git@github.com:drakeguan/vim-sessionman.vim.git
 [submodule "available/pydoc"]
 	path = available/pydoc
 	url = git@github.com:drakeguan/vim-pydoc.vim.git
