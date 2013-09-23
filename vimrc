@@ -19,7 +19,7 @@
 "
 " For pathogen.vim: auto load all plugins in .vim/bundle
 filetype off
-call pathogen#infect()
+execute pathogen#infect()
 
 
 " auto reload vimrc when editing it

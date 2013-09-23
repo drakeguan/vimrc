@@ -1,6 +1,3 @@
-[submodule "autoload"]
-	path = autoload
-	url = git@github.com:drakeguan/vim-pathogen.git
 [submodule "available/autoclose"]
 	path = available/autoclose
 	url = git@github.com:drakeguan/vim-autoclose.git
