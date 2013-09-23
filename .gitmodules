@@ -37,9 +37,6 @@
 [submodule "available/snipmate"]
 	path = available/snipmate
 	url = git@github.com:drakeguan/vim-snipmate.vim.git
-[submodule "available/nerdcommenter"]
-	path = available/nerdcommenter
-	url = git@github.com:drakeguan/vim-nerdcommenter.git
 [submodule "available/nerdtree"]
 	path = available/nerdtree
 	url = git@github.com:drakeguan/vim-nerdtree.git
@@ -70,3 +67,6 @@
 [submodule "available/tagbar"]
 	path = available/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+[submodule "available/nerdcommenter"]
+	path = available/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
