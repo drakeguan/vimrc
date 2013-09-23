@@ -31,9 +31,6 @@
 [submodule "available/YankRing"]
 	path = available/YankRing
 	url = git@github.com:drakeguan/vim-YankRing.vim.git
-[submodule "available/taglist"]
-	path = available/taglist
-	url = git@github.com:drakeguan/vim-taglist.vim.git
 [submodule "available/pep8"]
 	path = available/pep8
 	url = git@github.com:drakeguan/vim-pep8.git
