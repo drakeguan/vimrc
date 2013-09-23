@@ -25,9 +25,6 @@
 [submodule "available/Command-T"]
 	path = available/Command-T
 	url = git@github.com:drakeguan/vim-Command-T.git
-[submodule "available/YankRing"]
-	path = available/YankRing
-	url = git@github.com:drakeguan/vim-YankRing.vim.git
 [submodule "available/pep8"]
 	path = available/pep8
 	url = git@github.com:drakeguan/vim-pep8.git
