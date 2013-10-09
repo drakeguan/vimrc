@@ -34,9 +34,6 @@
 [submodule "available/latex"]
 	path = available/latex
 	url = git@github.com:drakeguan/vim-latex.git
-[submodule "available/conque"]
-	path = available/conque
-	url = git@github.com:drakeguan/vim-conque.git
 [submodule "available/pydoc"]
 	path = available/pydoc
 	url = git@github.com:drakeguan/vim-pydoc.vim.git
@@ -46,9 +43,6 @@
 [submodule "available/SpellChecker"]
 	path = available/SpellChecker
 	url = https://github.com/vim-scripts/SpellChecker
-[submodule "available/ack"]
-	path = available/ack
-	url = https://github.com/mileszs/ack.vim.git
 [submodule "available/tagbar"]
 	path = available/tagbar
 	url = https://github.com/majutsushi/tagbar.git
