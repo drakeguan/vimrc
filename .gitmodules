@@ -64,6 +64,3 @@
 [submodule "available/Smart-Parentheses"]
 	path = available/Smart-Parentheses
 	url = https://github.com/vim-scripts/Smart-Parentheses.git
-[submodule "available/xmledit"]
-	path = available/xmledit
-	url = https://github.com/sukima/xmledit.git
