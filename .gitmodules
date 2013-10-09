@@ -31,9 +31,6 @@
 [submodule "available/latex"]
 	path = available/latex
 	url = git@github.com:drakeguan/vim-latex.git
-[submodule "available/pydoc"]
-	path = available/pydoc
-	url = git@github.com:drakeguan/vim-pydoc.vim.git
 [submodule "available/tComment"]
 	path = available/tComment
 	url = http://github.com/vim-scripts/tComment.git
