@@ -34,7 +34,7 @@ set history=50              " keep 50 lines of command line history
 set ruler                   " show the cursor position all the time
 set autoread                " auto read when file is changed from outside
 set modeline                " enable modeline
-set modelines=1             " enable modeline
+set modelines=5             " enable modeline
 set clipboard=unnamed       " yank to the system register (*) by default
 set showmode                " Show current mode
 set showcmd                 " Show (partial) command in the last line of the screen
