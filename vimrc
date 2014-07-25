@@ -316,6 +316,9 @@ autocmd BufNewFile,BufRead *.as     setlocal ft=actionscript
 " SConstruct
 autocmd BufNewFile,BufRead SConstruct	setlocal ft=python
 
+" MPEG-DASH file type
+autocmd BufNewFile,BufRead *.mpd     setlocal ft=xml
+
 " C/C++ specific settings
 autocmd FileType c,cpp,cc  set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
 
