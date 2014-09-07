@@ -4,31 +4,28 @@
 " Shuen-Huei (Drake) Guan <drake.guan@gmail.com>
 " Fork me on GITHUB  https://github.com/drakeguan/vimrc
 " 
-"
-"
-" derived from vgod's vimrc
-"
-" vgod's vimrc
-" Tsung-Hsiang (Sean) Chang <vgod@vgod.tw>
-" Fork me on GITHUB  https://github.com/vgod/vimrc
-"
 
 
-" SECTION: Settings Prior to other settings{{{1
+" SECTION: Vundle Settings{{{1
 "============================================================
 "
-" let's start vundle!
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
 
-" auto reload vimrc when editing it
-autocmd! bufwritepost .vimrc source ~/.vimrc
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 
 
 " SECTION: General Settings{{{1
@@ -49,6 +46,7 @@ set nobackup                " no *~ backup files
 set wildignore=*.o,*.class,*.pyc    " ignore these files while expanding wild chars
 set tm=500                  " time in milliseconds waited for a key/mapping to complete
 syntax on                   " syntax highlight
+autocmd! bufwritepost .vimrc source ~/.vimrc " auto reload vimrc when editing it
 
 
 " SECTION: Status line Settings{{{2
