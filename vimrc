@@ -17,10 +17,15 @@
 " SECTION: Settings Prior to other settings{{{1
 "============================================================
 "
-" For pathogen.vim: auto load all plugins in .vim/bundle
-filetype off
-execute pathogen#infect()
+" let's start vundle!
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
