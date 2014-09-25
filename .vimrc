@@ -27,7 +27,7 @@ Plugin 'tComment'
 " NerdCommenter
 Plugin 'scrooloose/nerdcommenter'
 " SpellChecker
-Plugin 'SpellChecker'
+"Plugin 'SpellChecker'
 " Markdown
 Plugin 'hallison/vim-markdown'
 " Goto File for Python
