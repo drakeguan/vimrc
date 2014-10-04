@@ -18,26 +18,16 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-" YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
-" AutoClose
-Plugin 'Townk/vim-autoclose'
-" tComment
-Plugin 'tComment'
-" NerdCommenter
-Plugin 'scrooloose/nerdcommenter'
-" SpellChecker
-"Plugin 'SpellChecker'
-" Markdown
-Plugin 'hallison/vim-markdown'
-" Goto File for Python
-Plugin 'drakeguan/vim-gf-python'
-" Python fold
-Plugin 'drakeguan/vim-python_ifold'
-" Snipmate
-Plugin 'drakeguan/vim-snipmate.vim'
-" Vim template
-Plugin 'drakeguan/vim-template'
+Plugin 'Valloric/YouCompleteMe' " YouCompleteMe
+Plugin 'Townk/vim-autoclose' " AutoClose
+Plugin 'tComment' " tComment
+Plugin 'scrooloose/nerdcommenter' " NerdCommenter
+"Plugin 'SpellChecker' " SpellChecker
+Plugin 'hallison/vim-markdown' " Markdown
+Plugin 'drakeguan/vim-gf-python' " Goto File for Python
+Plugin 'drakeguan/vim-python_ifold' " Python fold
+Plugin 'drakeguan/vim-snipmate.vim' " Snipmate
+Plugin 'drakeguan/vim-template' " Vim template
 
 "" The following are examples of different formats supported.
 "" Keep Plugin commands between vundle#begin/end.
@@ -58,6 +48,7 @@ Plugin 'drakeguan/vim-template'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+" }}}1
 
 
 
@@ -101,6 +92,7 @@ function! HasPaste()
         return ''
     endif
 endfunction
+" }}}2
 
 
 " SECTION: Search Settings{{{2
@@ -109,12 +101,14 @@ set incsearch               " incremental search
 set showmatch               " Cursor shows matching
 set ignorecase              " ignore case when searching
 set smartcase               " ignore case if search pattern is all lowercase,case-sensitive otherwise
+" }}}2
 
 
 " SECTION: Filetype Settings{{{2
 filetype on           " Enable filetype detection
 filetype indent on    " Enable filetype-specific indenting
 filetype plugin on    " Enable filetype-specific plugins
+" }}}2
 
 
 " SECTION: Color Settings{{{2
@@ -133,6 +127,7 @@ endif
 "set background=dark 
 set t_Co=256          " 256 color mode
 colors distinguished
+" }}}2
 
 
 " SECTION: Tab Page Settings{{{2
@@ -145,6 +140,7 @@ map <C-]> gT
 " go to prev tab 
 map <C-\> gt
 " go to next tab
+" }}}2
 
 
 " SECTION: Window Settings{{{2
@@ -165,6 +161,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+" }}}2
 
 
 " SECTION: Encoding Settings{{{2
@@ -189,6 +186,7 @@ fun! Big5()
         set encoding=big5
         set fileencoding=big5
 endfun
+" }}}2
 
 
 " SECTION: <TAB> Settings{{{2
@@ -205,12 +203,14 @@ vnoremap < <gv
 vnoremap > >gv
 
 au FileType make set noexpandtab
+" }}}2
 
 
 " SECTION: Sound Settings{{{2
 set noerrorbells            " disable sound on errors
 "set novisualbell            " disable visual bell
 "set t_vb=
+" }}}2
 
 
 " SECTION: Other Settings{{{2
@@ -243,6 +243,7 @@ nmap <leader>p :set paste!<BAR>set paste?<CR>
 
 " set vimdiff to ignore whitespaces
 set diffopt+=iwhite
+" }}}2
 
 
 " SECTION: LargeFiles Settings{{{2
@@ -396,6 +397,7 @@ set grepprg=grep\ -nH\ $*
 " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
+" }}}2
 
 
 " --- AutoClose - Inserts matching bracket, paren, brace or quote{{{2
@@ -416,32 +418,39 @@ let g:tex_flavor='latex'
 " disable <> for C/C++/Python
 autocmd FileType cpp let b:AutoClosePairs = AutoClose#ParsePairs("() [] {} \"")
 autocmd FileType python let b:AutoClosePairs = AutoClose#ParsePairs("() [] {} \" '")
+" }}}2
 
 
 " --- pydiction{{{2
 let g:pydiction_location = $HOME."/.vim/bundle/pydiction/complete-dict"
+" }}}2
 
 
 " --- Command-T{{{2
 "let g:CommandTMaxHeight = 15
+" }}}2
 
 
 " --- SuperTab{{{2
 "let g:SuperTabDefaultCompletionType = "context"
+" }}}2
 
 
 " --- taglist{{{2
 "nnoremap <silent> <F8> :TlistToggle<CR>
 "let Tlist_Exit_OnlyWindow = 1
 "let Tlist_GainFocus_On_ToggleOpen = 1
+" }}}2
 
 
 " --- tagbar{{{2
 nnoremap <silent> <F8> :TagbarToggle<CR>
+" }}}2
 
 
 " --- conque{{{2
 let g:ConqueTerm_TERM = 'xterm'
+" }}}2
 
 
 " --- ropevim{{{2
@@ -449,6 +458,7 @@ let g:ConqueTerm_TERM = 'xterm'
 "    let $PYTHONPATH .= ":".$HOME."/.vim/ropevim/pylibs"
 "    source $HOME/.vim/ropevim/src/ropevim/ropevim.vim
 "endif
+" }}}2
 
 
 " --- pylint{{{2
@@ -459,5 +469,6 @@ let g:pylint_onwrite = 0
 let g:pylint_show_rate = 0
 "   Openning of QuickFix window can be disabled with
 "       let g:pylint_cwindow = 0
+" }}}2
 
 
