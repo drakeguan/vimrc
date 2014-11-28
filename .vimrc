@@ -1,53 +1,43 @@
-" vim: set fdm=marker:
-"
-" drakeguan's vimrc
-" Shuen-Huei (Drake) Guan <drake.guan@gmail.com>
-" Fork me on GITHUB  https://github.com/drakeguan/vimrc
-" 
-
-
-" SECTION: Vundle Settings{{{1
-"============================================================
-"
+" SECTION: Vundle load{{{1
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe' " YouCompleteMe
-Plugin 'Townk/vim-autoclose' " AutoClose
-Plugin 'tComment' " tComment
-Plugin 'scrooloose/nerdcommenter' " NerdCommenter
-"Plugin 'SpellChecker' " SpellChecker
-Plugin 'hallison/vim-markdown' " Markdown
-Plugin 'drakeguan/vim-gf-python' " Goto File for Python
-Plugin 'drakeguan/vim-python_ifold' " Python fold
-Plugin 'drakeguan/vim-snipmate.vim' " Snipmate
-Plugin 'drakeguan/vim-template' " Vim template
-
-"" The following are examples of different formats supported.
-"" Keep Plugin commands between vundle#begin/end.
-"" plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
-"" plugin from http://vim-scripts.org/vim/scripts.html
-"Plugin 'L9'
-"" Git plugin not hosted on GitHub
-"Plugin 'git://git.wincent.com/command-t.git'
-"" git repos on your local machine (i.e. when working on your own plugin)
-"Plugin 'file:///home/gmarik/path/to/plugin'
-"" The sparkup vim script is in a subdirectory of this repo called vim.
-"" Pass the path to set the runtimepath properly.
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-"" Avoid a name conflict with L9
-"Plugin 'user/L9', {'name': 'newL9'}
+" python-mode
+Plugin 'klen/python-mode'
+" vim-airline
+Plugin 'bling/vim-airline'
+" vim-fugitive
+Plugin 'tpope/vim-fugitive'
+" tabline
+Plugin 'mkitt/tabline.vim'
+" nerdcommenter
+Plugin 'scrooloose/nerdcommenter'
+" surround
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to
+" auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+let g:airline#extensions#tabline#enabled = 1
 " }}}1
 
 
@@ -56,7 +46,8 @@ filetype plugin indent on    " required
 "============================================================
 set nocompatible            " not compatible with the old-fashion vi mode
 set bs=2                    " allow backspacing over everything in insert mode
-set history=50              " keep 50 lines of command line history
+set history=255             " keep 50 lines of command line history
+set undolevels=255          " user many muchos levels of undo
 set ruler                   " show the cursor position all the time
 set autoread                " auto read when file is changed from outside
 set modeline                " enable modeline
@@ -68,31 +59,13 @@ set wildchar=<TAB>          " start wild expansion in the command line using <TA
 set wildmenu                " wild char completion menu
 set nobackup                " no *~ backup files
 set wildignore=*.o,*.class,*.pyc    " ignore these files while expanding wild chars
+set title                   " change the terminal's title
 set tm=500                  " time in milliseconds waited for a key/mapping to complete
 syntax on                   " syntax highlight
+let mapleader = ","         " change the mapleader from \ to ,
 autocmd! bufwritepost .vimrc source ~/.vimrc " auto reload vimrc when editing it
+" }}}1
 
-
-" SECTION: Status line Settings{{{2
-set laststatus=2
-set statusline=\ %{HasPaste()}%<%-15.25(%f%)%m%r%h\ %w\ \ 
-set statusline+=\ \ \ [%{&ff}/%Y] 
-set statusline+=\ \ \ %<%20.30(%{hostname()}:%{CurDir()}%)\ 
-set statusline+=%=%-10.(%l,%c%V%)\ %p%%/%L
-
-function! CurDir()
-    let curdir = substitute(getcwd(), $HOME, "~", "")
-    return curdir
-endfunction
-
-function! HasPaste()
-    if &paste
-        return '[PASTE]'
-    else
-        return ''
-    endif
-endfunction
-" }}}2
 
 
 " SECTION: Search Settings{{{2
@@ -104,30 +77,19 @@ set smartcase               " ignore case if search pattern is all lowercase,cas
 " }}}2
 
 
-" SECTION: Filetype Settings{{{2
-filetype on           " Enable filetype detection
-filetype indent on    " Enable filetype-specific indenting
-filetype plugin on    " Enable filetype-specific plugins
-" }}}2
-
 
 " SECTION: Color Settings{{{2
-if has("gui_running")
-" GUI color and font settings
-"    set guifont=Osaka-Mono:h20
-"    set background=dark 
-"    set t_Co=256          " 256 color mode
-    set cursorline        " highlight current line
-"    colors moria
-    "colors wombat256
-else
-" terminal color settings
-"    colors vgod
-endif
-"set background=dark 
 set t_Co=256          " 256 color mode
 colors distinguished
+if has("gui_running")
+	" GUI color and font settings
+	set cursorline        " highlight current line
+	"colors wombat256
+else
+	" terminal color settings
+endif
 " }}}2
+
 
 
 " SECTION: Tab Page Settings{{{2
@@ -137,338 +99,22 @@ map <C-t><C-w> :tabclose<CR>
 " close tab
 
 map <C-]> gT
-" go to prev tab 
+" go to prev tab
 map <C-\> gt
 " go to next tab
 " }}}2
 
 
-" SECTION: Window Settings{{{2
-set wmw=0                     " set the min width of a window to 0 so we can maximize others 
-set wmh=0                     " set the min height of a window to 0 so we can maximize others
-
-" nmap <C-J> <C-W>j<C-W>_
-" " move to and maximize the below split 
-" nmap <C-K> <C-W>k<C-W>_
-" " move to and maximize the above split 
-" nmap <C-H> <c-w>h<c-w><bar>
-" " move to and maximize the left split 
-" nmap <C-L> <c-w>l<c-w><bar>
-" " move to and maximize the right split
-
-" Easy split navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-" }}}2
-
 
 " SECTION: Encoding Settings{{{2
-set encoding=utf-8                                  
+set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,big5,latin1
-
-fun! ViewUTF8()
-        set encoding=utf-8                                  
-        set termencoding=big5
-endfun
-
-fun! UTF8()
-        set encoding=utf-8                                  
-        set termencoding=big5
-        set fileencoding=utf-8
-        set fileencodings=ucs-bom,big5,utf-8,latin1
-endfun
-
-fun! Big5()
-        set encoding=big5
-        set fileencoding=big5
-endfun
 " }}}2
 
 
-" SECTION: <TAB> Settings{{{2
-" set expandtab               "replace <TAB> with spaces
-" set softtabstop=4 
-" set shiftwidth=4 
 
-set autoindent              " auto indentation
-set copyindent              " copy the previous indentation on autoindenting
-set smarttab                " insert tabs on the start of a line according to context
-
-" allow multiple indentation/deindentation in visual mode
-vnoremap < <gv
-vnoremap > >gv
-
-au FileType make set noexpandtab
-" }}}2
-
-
-" SECTION: Sound Settings{{{2
-set noerrorbells            " disable sound on errors
-"set novisualbell            " disable visual bell
-"set t_vb=
-" }}}2
-
-
-" SECTION: Other Settings{{{2
-"Restore cursor to file position in previous editing session
-set viminfo='10,\"100,:20,%,n~/.viminfo
-au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
-
-" set leader to ,
-let mapleader=","
-let g:mapleader=","
-
-"" open the error console
-"map <leader>cc :botright cope<CR> 
-"" move to next error
-"map <leader>] :cn<CR>
-"" move to the prev error
-"map <leader>[ :cp<CR>
-
-
-" ,/ toggles search highlighting
-nmap <leader>/ :set hls!<CR>
-
-"" Bash like keys for the command line
-cnoremap <C-A>      <Home>
-cnoremap <C-E>      <End>
-cnoremap <C-K>      <C-U>
-
-" ,p toggles paste mode
-nmap <leader>p :set paste!<BAR>set paste?<CR>
-
-" set vimdiff to ignore whitespaces
-set diffopt+=iwhite
-" }}}2
-
-
-" SECTION: LargeFiles Settings{{{2
-" LargeFile: Sets up an autocmd to make editing large files work with celerity
-"   Author:		Charles E. Campbell, Jr.
-"   Date:		Sep 23, 2008
-"   Version:	4
-" GetLatestVimScripts: 1506 1 :AutoInstall: LargeFile.vim
-
-" ---------------------------------------------------------------------
-" Load Once: {{{3
-if exists("g:loaded_LargeFile") || &cp
- finish
-endif
-let g:loaded_LargeFile = "v4"
-let s:keepcpo          = &cpo
-set cpo&vim
-
-" ---------------------------------------------------------------------
-" Commands: {{{3
-com! Unlarge			call s:Unlarge()
-com! -bang Large		call s:LargeFile(<bang>0,expand("%"))
-
-" ---------------------------------------------------------------------
-"  Options: {{{3
-if !exists("g:LargeFile")
- let g:LargeFile= 20	" in megabytes
-endif
-
-" ---------------------------------------------------------------------
-"  LargeFile Autocmd: {{{3
-" for large files: turns undo, syntax highlighting, undo off etc
-" (based on vimtip#611)
-augroup LargeFile
- au!
- au BufReadPre * call <SID>LargeFile(0,expand("<afile>"))
- au BufReadPost *
- \  if &ch < 2 && (getfsize(expand("<afile>")) >= g:LargeFile*1024*1024 || getfsize(expand("<afile>")) == -2)
- \|  echomsg "***note*** handling a large file"
- \| endif
-augroup END
-
-" ---------------------------------------------------------------------
-" s:LargeFile: {{{4
-fun! s:LargeFile(force,fname)
-"  call Dfunc("LargeFile(force=".a:force." fname<".a:fname.">)")
-  if a:force || getfsize(a:fname) >= g:LargeFile*1024*1024 || getfsize(a:fname) <= -2
-   syn clear
-   let b:eikeep = &ei
-   let b:ulkeep = &ul
-   let b:bhkeep = &bh
-   let b:fdmkeep= &fdm
-   let b:swfkeep= &swf
-   set ei=FileType
-   setlocal noswf bh=unload fdm=manual ul=-1
-   let fname=escape(substitute(a:fname,'\','/','g'),' ')
-   exe "au LargeFile BufEnter ".fname." set ul=-1"
-   exe "au LargeFile BufLeave ".fname." let &ul=".b:ulkeep."|set ei=".b:eikeep
-   exe "au LargeFile BufUnload ".fname." au! LargeFile * ". fname
-   echomsg "***note*** handling a large file"
-  endif
-"  call Dret("s:LargeFile")
-endfun
-
-" ---------------------------------------------------------------------
-" s:Unlarge: this function will undo what the LargeFile autocmd does {{{4
-fun! s:Unlarge()
-"  call Dfunc("s:Unlarge()")
-  if exists("b:eikeep") |let &ei  = b:eikeep |endif
-  if exists("b:ulkeep") |let &ul  = b:ulkeep |endif
-  if exists("b:bhkeep") |let &bh  = b:bhkeep |endif
-  if exists("b:fdmkeep")|let &fdm = b:fdmkeep|endif
-  if exists("b:swfkeep")|let &swf = b:swfkeep|endif
-  syn on
-  doau FileType
-"  call Dret("s:Unlarge")
-endfun
-
-" ---------------------------------------------------------------------
-"  Restore: {{{3
-let &cpo= s:keepcpo
-unlet s:keepcpo
-
-
-
-
-
-" SECTION: Programming Settings{{{1
-"============================================================
-"
-
-" SECTION: Enable omni completion. (Ctrl-X Ctrl-O){{{2
-autocmd FileType html,markdown      setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript         setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType xml                setlocal omnifunc=xmlcomplete#CompleteTags
-autocmd FileType css                setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType c                  setlocal omnifunc=ccomplete#Complete
-autocmd FileType java               setlocal omnifunc=javacomplete#Complete
-
-" make CSS omnicompletion work for SASS and SCSS
-autocmd BufNewFile,BufRead *.scss   setlocal ft=scss.css
-autocmd BufNewFile,BufRead *.sass   setlocal ft=sass.css
-
-" actionscript 3 file type
-autocmd BufNewFile,BufRead *.as     setlocal ft=actionscript
-
-" SConstruct
-autocmd BufNewFile,BufRead SConstruct	setlocal ft=python
-
-" MPEG-DASH file type
-autocmd BufNewFile,BufRead *.mpd     setlocal ft=xml
-
-" C/C++ specific settings
-autocmd FileType c,cpp,cc  set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,n0,f0,{0,}0,^-1s,:0,=s,g0,h1s,p2,t0,+2,(2,)20,*30
-
-" Ctrl-[ jump out of the tag stack (undo Ctrl-])
-"map <C-[> <ESC>:po<CR>
-
-" ,g generates the header guard
-"map <leader>g :call IncludeGuard()<CR>
-"fun! IncludeGuard()
-"   let basename = substitute(bufname(""), '.*/', '', '')
-"   let guard = '_' . substitute(toupper(basename), '\.', '_', "H")
-"   call append(0, "#ifndef " . guard)
-"   call append(1, "#define " . guard)
-"   call append( line("$"), "#endif // for #ifndef " . guard)
-"endfun
-
-
-" use syntax complete if nothing else available
-if has("autocmd") && exists("+omnifunc")
-  autocmd Filetype *
-              \        if &omnifunc == "" |
-              \                setlocal omnifunc=syntaxcomplete#Complete |
-              \        endif
-endif
-
-
-
-" SECTION: Plugin Settings{{{1
-"============================================================
-"
-
-
-" --- vim-latex - many latex shortcuts and snippets{{{2
-" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
-" can be called correctly.
-set shellslash
-set grepprg=grep\ -nH\ $*
-" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
-" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
-" The following changes the default filetype back to 'tex':
-let g:tex_flavor='latex'
-" }}}2
-
-
-" --- AutoClose - Inserts matching bracket, paren, brace or quote{{{2
-" fixed the arrow key problems caused by AutoClose
-"if !has("gui_running")        
-"   set term=linux
-"   imap OA <ESC>ki
-"   imap OB <ESC>ji
-"   imap OC <ESC>li
-"   imap OD <ESC>hi
-"
-"   nmap OA k
-"   nmap OB j
-"   nmap OC l
-"   nmap OD h
-"endif
-
-" disable <> for C/C++/Python
-autocmd FileType cpp let b:AutoClosePairs = AutoClose#ParsePairs("() [] {} \"")
-autocmd FileType python let b:AutoClosePairs = AutoClose#ParsePairs("() [] {} \" '")
-" }}}2
-
-
-" --- pydiction{{{2
-let g:pydiction_location = $HOME."/.vim/bundle/pydiction/complete-dict"
-" }}}2
-
-
-" --- Command-T{{{2
-"let g:CommandTMaxHeight = 15
-" }}}2
-
-
-" --- SuperTab{{{2
-"let g:SuperTabDefaultCompletionType = "context"
-" }}}2
-
-
-" --- taglist{{{2
-"nnoremap <silent> <F8> :TlistToggle<CR>
-"let Tlist_Exit_OnlyWindow = 1
-"let Tlist_GainFocus_On_ToggleOpen = 1
-" }}}2
-
-
-" --- tagbar{{{2
-nnoremap <silent> <F8> :TagbarToggle<CR>
-" }}}2
-
-
-" --- conque{{{2
-let g:ConqueTerm_TERM = 'xterm'
-" }}}2
-
-
-" --- ropevim{{{2
-"if has('python')
-"    let $PYTHONPATH .= ":".$HOME."/.vim/ropevim/pylibs"
-"    source $HOME/.vim/ropevim/src/ropevim/ropevim.vim
-"endif
-" }}}2
-
-
-" --- pylint{{{2
-"   To disable calling Pylint every
-"   time a buffer is saved put into .vimrc file
-let g:pylint_onwrite = 0
-"   Displaying code rate calculated by Pylint can be avoided by setting
-let g:pylint_show_rate = 0
-"   Openning of QuickFix window can be disabled with
-"       let g:pylint_cwindow = 0
-" }}}2
-
-
+" vim-airline
+set laststatus=2
+let g:airline_powerline_fonts = 1
