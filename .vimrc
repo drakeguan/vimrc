@@ -22,6 +22,10 @@ Plugin 'mkitt/tabline.vim'
 Plugin 'scrooloose/nerdcommenter'
 " surround
 Plugin 'tpope/vim-surround'
+" JSON.vim
+Plugin 'elzr/vim-json'
+" Vim colorschemes
+Plugin 'flazz/vim-colorschemes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -82,7 +86,8 @@ set smartcase               " ignore case if search pattern is all lowercase,cas
 
 " SECTION: Color Settings{{{2
 set t_Co=256          " 256 color mode
-colors distinguished
+set background=dark
+colorscheme solarized
 if has("gui_running")
 	" GUI color and font settings
 	set cursorline        " highlight current line
