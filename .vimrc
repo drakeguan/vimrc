@@ -44,25 +44,27 @@ let g:airline#extensions#tabline#enabled = 1
 
 " SECTION: General Settings{{{1
 "============================================================
-set nocompatible            " not compatible with the old-fashion vi mode
-set bs=2                    " allow backspacing over everything in insert mode
-set history=255             " keep 50 lines of command line history
-set undolevels=255          " user many muchos levels of undo
-set ruler                   " show the cursor position all the time
-set autoread                " auto read when file is changed from outside
-set modeline                " enable modeline
-set modelines=5             " enable modeline
-set clipboard=unnamed       " yank to the system register (*) by default
-set showmode                " Show current mode
-set showcmd                 " Show (partial) command in the last line of the screen
-set wildchar=<TAB>          " start wild expansion in the command line using <TAB>
-set wildmenu                " wild char completion menu
-set nobackup                " no *~ backup files
-set wildignore=*.o,*.class,*.pyc    " ignore these files while expanding wild chars
-set title                   " change the terminal's title
-set tm=500                  " time in milliseconds waited for a key/mapping to complete
-syntax on                   " syntax highlight
-let mapleader = ","         " change the mapleader from \ to ,
+set nocompatible                        " not compatible with the old-fashion vi mode
+set bs=2                                " allow backspacing over everything in insert mode
+set history=255                         " keep 255 lines of command line history
+set undolevels=255                      " user many muchos levels of undo
+set ruler                               " show the cursor position all the time
+set autoread                            " auto read when file is changed from outside
+set modeline                            " enable modeline
+set modelines=5                         " enable modeline
+set clipboard=unnamed                   " yank to the system register (*) by default
+set showmode                            " Show current mode
+set showcmd                             " Show (partial) command in the last line of the screen
+set wildchar=<TAB>                      " start wild expansion in the command line using <TAB>
+set wildmenu                            " wild char completion menu
+set nobackup                            " no *~ backup files
+set wildignore=*.o,*.class,*.pyc        " ignore these files while expanding wild chars
+set title                               " change the terminal's title
+set visualbell                          " don't beep
+set noerrorbells                        " don't beep
+set tm=500                              " time in milliseconds waited for a key/mapping to complete
+syntax on                               " syntax highlight
+let mapleader = ","                     " change the mapleader from \ to ,
 autocmd! bufwritepost .vimrc source ~/.vimrc " auto reload vimrc when editing it
 " }}}1
 
@@ -84,7 +86,6 @@ colors distinguished
 if has("gui_running")
 	" GUI color and font settings
 	set cursorline        " highlight current line
-	"colors wombat256
 else
 	" terminal color settings
 endif
