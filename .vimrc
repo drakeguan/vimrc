@@ -26,6 +26,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'elzr/vim-json'
 " Vim colorschemes
 Plugin 'flazz/vim-colorschemes'
+" Markdown Vim Mode
+Plugin 'plasticboy/vim-markdown'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
