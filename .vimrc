@@ -123,6 +123,8 @@ set fileencodings=ucs-bom,utf-8,big5,latin1
 
 
 
+" disable preview of docstring while autocompleting through period.
+set completeopt=menu 
 " vim-airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
