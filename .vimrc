@@ -28,6 +28,8 @@ Plugin 'elzr/vim-json'
 Plugin 'flazz/vim-colorschemes'
 " Markdown Vim Mode
 Plugin 'plasticboy/vim-markdown'
+" haskell vim
+Plugin 'raichoo/haskell-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
