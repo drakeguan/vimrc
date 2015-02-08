@@ -129,6 +129,8 @@ set completeopt=menu
 let g:pymode_lint_checkers = ['pylint', 'pep8']
 " force pydoc (default to 'K') to open in terminal.
 let g:pymode_doc = 0
+" Finding definition, <C-C>g, would open a new tab.
+let g:pymode_rope_goto_definition_cmd = 'tabnew'
 " vim-airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
