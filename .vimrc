@@ -123,6 +123,7 @@ set fileencodings=ucs-bom,utf-8,big5,latin1
 
 
 
+" python-mode{{{2
 " disable preview of docstring while autocompleting through period.
 set completeopt=menu 
 " stick to pylint first.
@@ -131,6 +132,10 @@ let g:pymode_lint_checkers = ['pylint', 'pep8']
 let g:pymode_doc = 0
 " Finding definition, <C-C>g, would open a new tab.
 let g:pymode_rope_goto_definition_cmd = 'tabnew'
+" }}}2
+
+
+
 " vim-airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
