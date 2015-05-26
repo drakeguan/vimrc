@@ -97,6 +97,7 @@ colorscheme solarized
 if has("gui_running")
 	" GUI color and font settings
 	set cursorline        " highlight current line
+	set guifont=Anonymice_Powerline:h18
 else
 	" terminal color settings
 endif
