@@ -30,6 +30,8 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'plasticboy/vim-markdown'
 " haskell vim
 Plugin 'raichoo/haskell-vim'
+" VisIncr
+Plugin 'VisIncr'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
