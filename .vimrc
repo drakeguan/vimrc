@@ -26,6 +26,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'elzr/vim-json'
 " Vim colorschemes
 Plugin 'flazz/vim-colorschemes'
+Bundle 'altercation/vim-colors-solarized'
 " Markdown Vim Mode
 Plugin 'plasticboy/vim-markdown'
 " haskell vim
