@@ -11,7 +11,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 " python-mode
-Plugin 'klen/python-mode'
+" Plugin 'klen/python-mode'
 " vim-airline
 Plugin 'bling/vim-airline'
 " vim-fugitive
