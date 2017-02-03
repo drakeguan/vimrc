@@ -34,6 +34,9 @@ Plugin 'raichoo/haskell-vim'
 Plugin 'VisIncr'
 " vim-go
 Plugin 'fatih/vim-go'
+" repeat.vim
+Plugin 'tpope/vim-repeat'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
