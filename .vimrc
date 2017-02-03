@@ -32,6 +32,8 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'raichoo/haskell-vim'
 " VisIncr
 Plugin 'VisIncr'
+" vim-go
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
