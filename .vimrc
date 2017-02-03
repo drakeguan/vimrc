@@ -73,6 +73,7 @@ set title                               " change the terminal's title
 set visualbell                          " don't beep
 set noerrorbells                        " don't beep
 set tm=500                              " time in milliseconds waited for a key/mapping to complete
+set tabpagemax=100			" maximum number of tab pages to be opened by the |-p| command line argument
 syntax on                               " syntax highlight
 let mapleader = ","                     " change the mapleader from \ to ,
 autocmd! bufwritepost .vimrc source ~/.vimrc " auto reload vimrc when editing it
